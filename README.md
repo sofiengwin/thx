@@ -1,8 +1,9 @@
 # README
 
 * Ruby version
+```
   3.2.2
-* System dependencies
+```
 
 * How to start server
 
