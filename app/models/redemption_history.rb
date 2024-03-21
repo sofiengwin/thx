@@ -1,0 +1,2 @@
+class RedemptionHistory < ApplicationRecord
+end

@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+<h1>Redemption histories</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Value</th>
+    <th>Username</th>
+    <th>UserId</th>
+    <th>Redeemed At</th>
+  </tr>
+   <% @redemption_histories.each do |redemption_history| %>
+    <tr>
+      <td><%= redemption_history.reward_name %></td>
+      <td><%= redemption_history.reward_value %></td>
+      <td><%= redemption_history.user_name %></td>
+      <td><%= redemption_history.user_id %></td>
+      <td><%= redemption_history.created_at %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Promo One
+  value: 100
+  expired_at: 2024-03-20 18:13:31
+
+two:
+  title: Promo Two
+  value: 100
+  expired_at: 2024-03-20 18:13:31

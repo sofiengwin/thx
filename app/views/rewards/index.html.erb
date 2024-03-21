@@ -1,0 +1,45 @@
+<div>
+  <h3>Name: <%= @current_user.name %></h3>
+  <h3>Point Balance: <%= @current_user.points %></h3>
+  <h3><%= link_to "Redemption histories", redemption_histories_path %></h3>
+</div>
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Rewards</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Value</th>
+    <th>Expire At</th>
+  </tr>
+   <% @redeemed_rewards.each do |reward| %>
+    <tr>
+      <td><%= reward.id %></td>
+      <td><%= reward.title %></td>
+      <td><%= reward.value %></td>
+      <td><%= reward.expired_at %></td>
+      <td><strong>Redeemed</strong></td>
+    </tr>
+  <% end %>
+</table>
+
+<h1>Available Rewards</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Value</th>
+    <th>Expire At</th>
+  </tr>
+   <% @rewards.each do |reward| %>
+    <tr>
+      <td><%= reward.id %></td>
+      <td><%= reward.title %></td>
+      <td><%= reward.value %></td>
+      <td><%= reward.expired_at %></td>
+      <td>
+        <%= button_to "Redeem Now", reward_redeem_path(reward), params: {reward: reward.id } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
