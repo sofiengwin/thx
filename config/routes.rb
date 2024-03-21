@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :rewards do
+  resources :rewards, only: [:index] do
     post :redeem
   end
-  resources :redemption_histories
+  resources :redemption_histories, only: [:index]
+  root 'rewards#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
